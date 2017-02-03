@@ -30,7 +30,7 @@ class form(ttk.Frame):
             tmax = round(float(self.num2_entry.get()), 2)
             if tmax <= tmin:
                 showerror("Температура", 'Введите корректные значения(tmax>tmin)!')
-                # очищаем поля для ввода. больше часа искал эти свойства :(
+                # очищаем поля для ввода
                 self.num1_entry.delete('0',END)
                 self.num2_entry.delete('0',END)
                 tmax, tmin,flag = 0,0,0 # на тот случай, если решение повторно ищут, сброс
@@ -127,7 +127,7 @@ class form(ttk.Frame):
                 # сам алгоритм решения
                 #self.choose()
                 #print(mode)
-                # чтобы не нужно было пересчитывать матриу стоимостей
+                # чтобы не нужно было пересчитывать матрицу стоимостей
                 tmin = round(float(self.num1_entry.get()), 2)
                 tmax = round(float(self.num2_entry.get()), 2)
                 n = int(self.numb_pc.get())
